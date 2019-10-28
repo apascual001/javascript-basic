@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>Javascript bàsic</title>
+</head>
+<body>
+	<h2>Exercici 7 JavaScript bàsic</h2>
+	<p id="basic"></p>
+	<br>
+	<h2>Exercici 8 Calculadora</h2>
+	<p id="calcul"></p>
+	<br>
+
+</body>
+<script>
+	//ex1
+	var str = "Hola Mundo"; 
+
+	//ex2
+	console.log(str); 
+	alert("Ana Pascual");
+
+	//ex3 string variables
+	var a = 'Ana';
+	var b = 'Pascual';
+
+	//ex4 numeric variables and operation
+	var c, d, sum;
+	c = 1;
+	d = 4;
+	sum = c + d;
+
+	//ex5 nota_examen
+	var nota_examen;
+	nota_examen = 2
+	if (nota_examen >= 5) {
+		alert("Examen aprovat");
+	}
+	else {
+		alert("Examen no aprovat");
+	}
+	//ex5 mateix en una linea
+	nota_examen >= 5 ? console.log ("Examen aprovat") : console.log ("Examen no aprovat")
+	
+	//ex6 replace
+	var str = "Tinc un cotxe de color verd";
+	var res = str.replace("verd", "blau");
+	console.log (res);
+	var resu = str.replace(/o/g, "u");
+	console.log (resu);
+
+	//ex7 array
+	var objectes = ["taula", "cadira", "ordinador", "libreta"];
+	var i;
+	var text = "<ul>";
+	for (i = 0; i < 4; i++) {
+		var position = objectes.indexOf(objectes[i]);
+  		text += "<li>L'objecte " + objectes[i] + " està a la posició " + position + "</li>";
+	}
+	text += "</ul>";
+
+	document.getElementById("basic").innerHTML = text;
+
+
+	//ex8 calculadora
+
+	var operador, valor1, valor2;
+	function calculadora( operador, valor1, valor2){
+		if ( operador == "suma" ) {
+			return resultat = valor1 + valor2;
+		}
+		if ( operador == "resta" ){
+			return resultat = valor1 - valor2;
+		}
+		if ( operador == "divisió" ){
+			return resultat = valor1/valor2;
+		}
+		if ( operador == "multiplicació" ){
+			return resultat = valor1*valor2;
+		}
+		else { alert ("operació no vàlida");
+		}
+	}
+
+	var resultat = calculadora("suma",40,20);
+	console.log (resultat);
+	document.getElementById("calcul").innerHTML = "El resultat és " + resultat;
+
+
+
+	</script> 
+</html>
