@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>Javascript lletres - Fase 3</title>
+</head>
+<body>
+	
+</body>
+<script>
+	var nom = ["A","N","A","P","A","S","C","U","A","L"];
+	var nomMap = new Map();
+	 
+	function inicimapa(element) {
+		nomMap.set(element,0);
+	}
+	nom.forEach (inicimapa);
+
+
+	function contaLletra (element) {	
+			var valor = nomMap.get(element);
+			var contador = valor + 1 ;
+			
+			nomMap.set(element,contador);
+	}	
+	nom.forEach (contaLletra);
+	
+	console.log (nomMap);
+	</script> 
+</html>
+
+
+
