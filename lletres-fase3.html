@@ -14,22 +14,22 @@
 <script>
 	var nom = ["A","N","A","P","A","S","C","U","A","L"];
 	var nomMap = new Map();
-	 
+	
 	function inicimapa(element) {
 		nomMap.set(element,0);
 	}
 	nom.forEach (inicimapa);
 
 
-	function contaLletra (element) {	
-			var valor = nomMap.get(element);
-			var contador = valor + 1 ;
-			
-			nomMap.set(element,contador);
+	function contaLletra (element,index) {
+			console.log(element);
+			console.log(index);
+			var valor = nomMap.get(element) + 1;			
+			nomMap.set(element,valor);
 	}	
 	nom.forEach (contaLletra);
 	
-	console.log (nomMap);
+	console.log(nomMap);
 	</script> 
 </html>
 
