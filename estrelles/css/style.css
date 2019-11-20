@@ -1,0 +1,20 @@
+/*custom styling for all icons */
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.stars {
+    display: flex;;
+    flex-direction: row-reverse;
+    font-size: 10em;
+  }
+
+.fas:hover, 
+.fas:hover~.fas,
+.fas.paint,
+.fas.paint~.fas{
+	color: #7979e0;
+}
